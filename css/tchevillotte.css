@@ -53,20 +53,20 @@ h1, h2 {
 .typewriter h2 {
     color: rgb(255, 255, 255);
     overflow: hidden;                                   
-    border-right: .2em solid rgb(255, 255, 255);      
+    border-right: .15em solid rgb(255, 255, 255);      
     white-space: nowrap;                                
     margin: 0 auto;                                     
     letter-spacing: .15em;                              
     animation: 
-        typingerase 14s steps(30, end),
+        typingerase 13s steps(30, end),
         blink-caret .7s step-end infinite;
     animation-iteration-count: infinite;
 }
 @keyframes typingerase {
     0% { width: 0 }
     25% { width: 0 }
-    50% { width: 100% } /* calc(100% + var(min-width)) calc(min-content) */
-    75% { width: 100% }
+    50% { width: 96% }
+    75% { width: 96% }
     100% { width: 0 }
 }
 @keyframes blink-caret {
