@@ -1,0 +1,72 @@
+/*
+Thomas Chevillotte
+2023
+*/
+
+
+
+/* BODY */
+body {
+    margin: 0;
+    background-color: black;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow:hidden !important;
+}
+
+
+
+    /* WRAPPER */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+    /* LOADER */
+.loader {
+    width: 3em;
+    height: 3em;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 0.8s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+
+    /* TEXT */
+.notrdy {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3vh;
+    user-select: none;
+}
+
+
+
+    /* MEDIA QUERIES */
+@media screen and (max-width: 767px) {  /* PHONE */ 
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {  /* TABLET */
+
+}
+
+@media screen and (max-height: 500px) {  /* CUSTOM little height */
+
+}
