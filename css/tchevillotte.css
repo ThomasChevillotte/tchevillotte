@@ -27,26 +27,6 @@ body {
 
 
 
-/* LOAD ANIMATION */
-.loada {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000000;
-    position:absolute;
-    animation: slide 2s ease forwards .5s;
-    z-index: 2;
-}  
-@keyframes slide {
-    0% {
-        transform: translateY(0vh);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-
-
     /* TEXT */ 
 .text1 {
     font-family: 'Poppins', sans-serif;
