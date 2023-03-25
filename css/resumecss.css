@@ -26,20 +26,29 @@ body {
 }
 
 
+    /* LOADER */
+.loader {
+    width: 3em;
+    height: 3em;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 0.8s linear infinite, loading 5s;
+}
 
-    /* TEXT */
-@keyframes loadingt {
-    0% {opacity: 0;}
-    50% {
-        opacity: 0;
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
     }
     100% {
-        opacity: 1;
+        transform: rotate(360deg);
     }
-}
-.text {
-    animation: loadingt 5s;
-}
+} 
+
+
+    /* TEXT */
 @keyframes loading {
     from {
         opacity: 0;
@@ -48,119 +57,21 @@ body {
         opacity: 1;
     }
 }
-h1 {
+.notrdy {
     font-family: 'Poppins', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 5vh;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    user-select: none;
-    animation : loading 3s;
-}
-a {
-    font-weight: 600;
-}
-a:link, a:visited, a:active { 
-    color:white; 
-    text-decoration:none;
-}
-span{
-    display:block;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    color: white;
     font-size: 3vh;
-    text-align: center;
     user-select: none;
+    animation: loading 5s;
 }
-p{
-  display:inline-block;
-  height:1.5em;
-  overflow:hidden;
-  font-size: 3vh;
-  position:relative;
-}
-.text span{
-  animation: flip 50s infinite;
-  transition:.5s;
-}
-@keyframes flip{
-    0%{transform:translateY(0)}
-    10%{transform:translateY(0)}
-    14%{transform:translateY(-100%)}
-    20%{transform:translateY(-100%)}
-    24%{transform:translateY(-200%)}
-    30%{transform:translateY(-200%)}
-    34%{transform:translateY(-300%)}
-    40%{transform:translateY(-300%)}
-    44%{transform:translateY(-400%)}
-    50%{transform:translateY(-400%)}
-    54%{transform:translateY(-500%)}
-    60%{transform:translateY(-500%)}
-    64%{transform:translateY(-600%)}
-    70%{transform:translateY(-600%)}
-    74%{transform:translateY(-700%)}
-    80%{transform:translateY(-700%)}
-    84%{transform:translateY(-800%)}
-    90%{transform:translateY(-800%)}
-    94%{transform:translateY(0)}
-    100%{transform:translateY(0)}
-  }
-
-
 
 
 
     /* MEDIA QUERIES */
 @media screen and (max-width: 767px) {  /* PHONE */ 
-    body {
-        margin: 0;
-        background-color: black;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow:scroll !important;
-    }
-    p {
-        width: 90%;
-        height:2.5em;
-    }
-    span {
-        height:3em;
-        font-size: 2.5vh;
-    }
+
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {  /* TABLET */
-    body {
-        margin: 0;
-        background-color: black;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow:scroll !important;
-    }
-    p {
-        width: 90%;
-        height:2.5em;
-    }
-    span {
-        height:3em;
-        font-size: 2.5vh;
-    }
-}
 
-@media screen and (max-height: 500px) {  /* CUSTOM little height */
-    body {
-        margin: 0;
-        background-color: black;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow:scroll !important;
-    }
-    p {
-        width: 90%;
-        height:3em;
-    }
-    span {
-        font-size: 2.5vh;
-    }
 }
