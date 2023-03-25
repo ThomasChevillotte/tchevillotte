@@ -28,17 +28,38 @@ body {
 
 
     /* TEXT */ 
+@keyframes loading {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .text1 {
     font-family: 'Poppins', sans-serif;
     color: rgb(255, 255, 255);
     font-size: 5vh;
+    animation: loading 3s;
 }
 
+@keyframes loadingt2 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .text2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: rgb(255, 255, 255);
     font-size: 4vh;
+    animation: loadingt2 5s;
 }
 
 h1, h2 {
@@ -58,14 +79,14 @@ h1, h2 {
     margin: 0 auto;                                     
     letter-spacing: .15em;                              
     animation: 
-        typingerase 13s steps(30, end),
-        blink-caret .7s step-end infinite;
-    animation-iteration-count: infinite;
+        typingerase 13s steps(30, end) infinite,
+        blink-caret .7s step-end infinite,
+        loadingt2 3s;
 }
 @keyframes typingerase {
     0% { width: 0 }
     25% { width: 0 }
-    50% { width: 96% } /* calc(100% + var(min-width)) calc(min-content) length */
+    50% { width: 96% }
     75% { width: 96% }
     100% { width: 0 }
 }
@@ -77,12 +98,27 @@ h1, h2 {
 
 
     /* MENU */
+@keyframes loadingt {
+    0% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    70% {
+        opacity: 0;
+        pointer-events: none;
+    }
+    100% {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
 ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 7vh;
     padding: 0;
+    animation: loadingt 10s;
 }
 ul li a {
     position: relative;
