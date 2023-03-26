@@ -5,7 +5,7 @@ Thomas Chevillotte
 
 
 
-/* BODY */
+    /* BODY */
 body {
     margin: 0;
     background-color: black;
@@ -38,7 +38,7 @@ body {
     }
 }
 .text {
-    animation: loadingt 5s; /* 3s*/
+    animation: loadingt 5s;
 }
 @keyframes loading {
     from {
@@ -99,6 +99,80 @@ p{
     81.25%{transform:translateY(-500%)}
     91.25%{transform:translateY(-500%)}
     100%{transform:translateY(0)}
+  }
+
+
+
+    /* MODAL RESUME*/
+.modal {
+    display: none;
+    position:fixed;
+    z-index: 1;
+    padding-top: 40vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: loading 1s;
+}
+.modal-content {
+    background-color: black;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid white;
+    width: 80%;
+    max-height: 70vh;
+    overflow: auto;
+}
+.textresume {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 2vh;
+    overflow:visible;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-block-start: 0;
+    padding-bottom: 2em;
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    height: 1.5em;
+}
+.close:hover, .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.buttonsresume {
+    padding-top: 2em;
+    text-align: center;
+}
+select, select:checked {
+    background-color:black;
+    color:white;
+    border: 2px solid white;
+    border-radius : 20px;
+    padding:10px;
+    width: 10em;
+    text-align: center;
+    appearance: none;
+    margin-right: 20px;
+}
+.dlbtn {
+    background-color:black;
+    color:white;
+    border: 2px solid white;
+    border-radius : 20px;
+    padding:10px;
+    width: 10em;
+    text-align: center;
+    pointer-events: none;
 }
 
 
@@ -120,6 +194,16 @@ p{
         height:3em;
         font-size: 2.5vh;
     }
+    .modal {
+        padding-top: 10vh;
+    }
+    .modal-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .textresume {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {  /* TABLET */
@@ -137,5 +221,15 @@ p{
     span {
         height:3em;
         font-size: 2.5vh;
+    }
+    .modal {
+        padding-top: 10vh;
+    }
+    .modal-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .textresume {
+        width: 100%;
     }
 }
