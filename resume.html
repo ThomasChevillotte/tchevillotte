@@ -25,10 +25,45 @@
             <span> I'm a French engineering student in France. </span>
             <span> I am studying mathematics, physics and computer science. </span>
             <span> I'm currently looking for work experiences to develop my skills. </span>
-            <span> You can take a look at some of the <a target="_blank" href="portfolio">projects</a> that i have done. </span>
+            <span> You can take a look at some of the <a target="_blank" href="portfolio.html">projects</a> that i have done. </span>
             <span> And get in touch with me : send an <a target="_blank" href="mailto:th.chevillotte@gmail.com">email</a> or a <a target="_blank" href="https://www.linkedin.com/in/thomas-chevillotte/">message</a>. </span>
-            <span> If you want a more detailled resume, you can find it <a href="">here</a>. </span>
-       </p>
+            <span> If you want a more detailled resume, you can find it <a id="resumebtn">here</a>. </span>
+        </p>
+
+        <div id="resume" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p class="textresume">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas tellus rutrum tellus pellentesque eu. Vel facilisis volutpat est velit egestas dui. Id faucibus nisl tincidunt eget nullam non nisi est. Massa sapien faucibus et molestie ac feugiat sed lectus. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Consequat ac felis donec et odio pellentesque. Non consectetur a erat nam at lectus urna duis. Varius duis at consectetur lorem donec. In eu mi bibendum neque egestas. Ut enim blandit volutpat maecenas volutpat. Pellentesque id nibh tortor id aliquet. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.</p>
+                <form class="buttonsresume" onsubmit="this.action = document.getElementById('selectfile').value;target='_blank'">
+                    <select id="selectfile" onclick="document.getElementById('dlbtn').style.pointerEvents='all'">
+                        <option selected hidden>VERSION</option>
+                        <option value="assets/FR.pdf#view=Fit">FRANCE</option>
+                        <option value="assets/EU.pdf#view=Fit">EUROPE</option>
+                        <option value="assets/us-cn.pdf#view=Fit">USA / CANADA</option>
+                        <option value="assets/uk-aus.pdf#view=Fit">UK / AUSTRALIA</option>
+                    </select>
+                    <input type="submit" value="DOWNLOAD" class="dlbtn" id="dlbtn"/>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            var modal = document.getElementById("resume");
+            var btn = document.getElementById("resumebtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
     </div>
 </body>
+
 </html>
