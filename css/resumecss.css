@@ -162,7 +162,6 @@ select, select:checked {
     width: 10em;
     text-align: center;
     appearance: none;
-    margin-right: 20px;
 }
 .dlbtn {
     background-color:black;
