@@ -19,6 +19,19 @@
 </head>
 
 <body>
+	<script type='text/javascript'>
+		(() => {
+		    if (window.localStorage) {
+			if (!localStorage.getItem('reload')) {
+			    localStorage['reload'] = true;
+			    window.location.reload();
+			} else {
+			    localStorage.removeItem('reload');
+			}
+		    }
+		})();
+    	</script>
+	
 	<div class="wrapper">
         <h1>I AM THOMAS.</h1>
         <p class="text">
