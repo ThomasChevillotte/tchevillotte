@@ -153,6 +153,9 @@ p{
     padding-top: 2em;
     text-align: center;
 }
+#resumebtn {
+    pointer:cursor;
+}
 select, select:checked {
     background-color:black;
     color:white;
