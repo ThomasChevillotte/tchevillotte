@@ -154,7 +154,7 @@ p{
     text-align: center;
 }
 #resumebtn {
-    pointer:cursor;
+    cursor: pointer;
 }
 select, select:checked {
     background-color:black;
