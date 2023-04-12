@@ -163,6 +163,7 @@ select, select:checked {
     border-radius : 20px;
     padding:10px;
     width: 10em;
+    outline:none;
     text-align: center;
     appearance: none;
 }
@@ -175,6 +176,7 @@ select, select:checked {
     width: 10em;
     text-align: center;
     pointer-events: none;
+    outline:none;
 }
 
 
