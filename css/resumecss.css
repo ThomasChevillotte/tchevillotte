@@ -153,6 +153,9 @@ p{
     padding-top: 2em;
     text-align: center;
 }
+#resume {
+    padding-bottom: 100vh;
+}
 #resumebtn {
     cursor: pointer;
 }
