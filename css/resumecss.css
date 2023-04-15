@@ -60,8 +60,8 @@ h1 {
 a {
     font-weight: 600;
 }
-a:link, a:visited, a:active { 
-    color:white; 
+a:link, a:visited, a:active {
+    color:white;
     text-decoration:none;
 }
 span{
@@ -108,7 +108,7 @@ p{
     display: none;
     position:fixed;
     z-index: 1;
-    padding-top: 40vh;
+    padding-top: 30vh;
     width: 100%;
     left: 0;
     top: 0;
@@ -122,7 +122,7 @@ p{
     padding-left: 40px;
     padding-right: 40px;
     border: 1px solid white;
-    width: 80%;
+    width: 100vh;
     max-height: 70vh;
     overflow: auto;
 }
@@ -136,6 +136,14 @@ p{
     text-justify: inter-word;
     margin-block-start: 0;
     padding-bottom: 2em;
+}
+@keyframes unloading {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 .close {
     color: white;
@@ -185,7 +193,7 @@ select, select:checked {
 
 
     /* MEDIA QUERIES */
-@media screen and (max-width: 767px) {  /* PHONE */ 
+@media screen and (max-width: 767px) {  /* PHONE */
     body {
         margin: 0;
         background-color: black;
@@ -207,6 +215,7 @@ select, select:checked {
     .modal-content {
         padding-left: 20px;
         padding-right: 20px;
+        width: 80%;
     }
     .textresume {
         width: 100%;
@@ -235,6 +244,7 @@ select, select:checked {
     .modal-content {
         padding-left: 20px;
         padding-right: 20px;
+        width: 80%;
     }
     .textresume {
         width: 100%;
