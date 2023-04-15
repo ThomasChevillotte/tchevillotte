@@ -21,7 +21,7 @@
 <body>
     <div class="wrapper">
         <h1>I AM THOMAS.</h1>
-	    
+
         <p class="text">
             <span> I am a French engineering student in France. </span>
             <span> I am studying mathematics, physics and computer science. </span>
@@ -34,14 +34,12 @@
         <div id="resume" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p class="textresume">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas tellus rutrum tellus pellentesque eu. Vel facilisis volutpat est velit egestas dui. Id faucibus nisl tincidunt eget nullam non nisi est. Massa sapien faucibus et molestie ac feugiat sed lectus. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Consequat ac felis donec et odio pellentesque. Non consectetur a erat nam at lectus urna duis. Varius duis at consectetur lorem donec. In eu mi bibendum neque egestas. Ut enim blandit volutpat maecenas volutpat. Pellentesque id nibh tortor id aliquet. Vitae aliquet nec ullamcorper sit amet risus nullam eget. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae.</p>
+                <p class="textresume">I decided to study Mathematics and Computer Science to obtain an engineering degree. Having obtained my high school diploma in France with highest honors, I was able to obtain an excellence fellowship for my studies, which led me to validate my first 2 years of pre-engineering cycle by being the valedictorian of my class. I had the chance to get my first professional experiences during these years, which allowed me to discover the world of work and to confront myself with concrete problems. I am therefore looking for new professional opportunities to put my knowledge into practice and discover new horizons. I am actively looking for an internship starting May 2024 as part of my first year of engineering studies.</p>
                 <form class="buttonsresume" onsubmit="this.action = document.getElementById('selectfile').value;target='_blank'">
                     <select id="selectfile" onclick="document.getElementById('dlbtn').style.pointerEvents='all'">
                         <option selected hidden>VERSION</option>
-                        <option value="assets/FR.pdf#view=Fit">FRANCE</option>
-                        <option value="assets/EU.pdf#view=Fit">EUROPE</option>
-                        <option value="assets/us-cn.pdf#view=Fit">USA / CANADA</option>
-                        <option value="assets/uk-aus.pdf#view=Fit">UK / AUSTRALIA</option>
+                        <option value="assets/FR.pdf#view=Fit">FRANCAIS</option>
+                        <option value="assets/EN.pdf#view=Fit">ENGLISH</option>
                     </select>
                     <input type="submit" value="DOWNLOAD" class="dlbtn" id="dlbtn"/>
                 </form>
@@ -53,14 +51,16 @@
             var btn = document.getElementById("resumebtn");
             var span = document.getElementsByClassName("close")[0];
             btn.onclick = function() {
-                modal.style.display = "block";
+              modal.style.display = "block";
             }
             span.onclick = function() {
-                modal.style.display = "none";
+              modal.style.animation = "unloading 1s";
+              setTimeout(() => {  modal.style.display = "none" }, 1000);
             }
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                  modal.style.animation = "unloading 1s";
+                  setTimeout(() => {  modal.style.display = "none" }, 1000);
                 }
             }
         </script>
