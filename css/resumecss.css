@@ -119,7 +119,7 @@ p{
     background-color: black;
     margin: auto;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;   /*20px*/
     padding-left: 40px;
     padding-right: 40px;
     border: 1px solid white;
