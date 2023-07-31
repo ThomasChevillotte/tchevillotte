@@ -123,7 +123,7 @@ p{
     padding-left: 40px;
     padding-right: 40px;
     border: 1px solid white;
-    width: 80vh;
+    width: 60%;
     max-height: 70vh;
     overflow: auto;
 }
@@ -131,7 +131,7 @@ p{
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     color: white;
-    font-size: 2vh;
+    font-size: 2.5vh;
     overflow:visible;
     text-align: justify;
     text-justify: inter-word;
