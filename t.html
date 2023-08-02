@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--PAGE SETTINGS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Engineering Student">
+    <meta name="keywords" content="Thomas, Chevillotte, Linkedin, Resume, Portfolio, Student, Engineering, Engineer">
+    <meta name="author" content="Thomas Chevillotte">
+    <link rel="stylesheet" href="css/portfoliocss.css">
+    <link rel="shortcut icon" href="assets/dot.png" type="image/x-icon">
+    <link rel="canonical" href="https://tchevillotte.com">
+    <title>tchevillotte</title>
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Thomas Chevillotte">
+    <meta property="og:title" content="Thomas Chevillotte">
+    <meta property="og:description" content="Engineering Student">
+    <meta property="og:url" content="https://tchevillotte.com">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image" content="https://tchevillotte.com/assets/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            max-width: 100% !important;
+            width: 100% !important;
+            overflow:hidden !important;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .loader {
+            width: 0.75em;
+            height: 0.75em;
+            border: 0.15em solid #FFF;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 0.8s linear infinite;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        } 
+        @keyframes loading {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .notrdy {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(255, 255, 255);
+            font-size: 5vh;
+            user-select: none;
+            animation: loading 5s;
+        }
+    </style>
+	<div class="wrapper">
+        <h1 class="notrdy">TH<span class="loader"></span>MAS.</h1>
+    </div>
+</body>
+</html>
