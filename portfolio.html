@@ -32,9 +32,82 @@
 
 <body>
 	<div class="wrapper">
-        <span class="loader"></span>
-        <h1 class="notrdy">This page is not ready yet.</h1>
+        <div class="slider">
+            <div id="slider-text" class="slider-text">
+                <p class="slider__contents" id="0" onclick="openmodal(this)">PPM Image Processing.<span class="bold"> C</span></p>
+                <p class="slider__contents" id="1" onclick="openmodal(this)">Meteorological Data Processing.<span class="bold"> C</span></p>
+                <p class="slider__contents" id="2" onclick="openmodal(this)">Some small web practical projects.<span class="bold"> JS & PHP</span></p>
+                <p class="slider__contents" id="3" onclick="openmodal(this)">Editable Website with new features<span class="bold"> JS & PHP</span></p>
+            </div>
+            <div class="slider-menu">
+                <input type="radio" name="slider" title="slide0" class="slider-button" onclick="document.getElementById('slider-text').style.left='0%';" checked="checked"/>
+                <input type="radio" name="slider" title="slide1" class="slider-button" onclick="document.getElementById('slider-text').style.left='-100%';"/>
+                <input type="radio" name="slider" title="slide2" class="slider-button" onclick="document.getElementById('slider-text').style.left='-200%';"/>
+                <input type="radio" name="slider" title="slide3" class="slider-button" onclick="document.getElementById('slider-text').style.left='-300%';"/>
+            </div>
+
+        <div id="modals-projects">
+            <div id="modal-0" class="modal">
+                <div class="modal-content">
+                    <span id="close-0" class="close">&times;</span>
+                    <h1 class="title-modal">PPM Image Processing.</h1>
+                    <div class="modal-infos">
+                        <div class="project-infos">
+                            <p class="subtitle">School Project - 2022</p>
+                            <p class="project-desc">This was a project where we were able to work on image processing, with the aim of applying various filters to PPM images. After learning about the PPM format, we created functions for reading and creating PPM files, then we moved on to the image processing itself. We created various image processing functions, such as black and white, binarization, rotation and symetry. We also worked on convolution processes, using the mathematical tools we had learned, and other functionalities such as zooming, blurring, erosion and dilation. The user could call up each filter via a specific command, then the program would process the image by applying the formulas to the input image data, then save the new image.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-1" class="modal">
+                <div class="modal-content">
+                    <span id="close-1" class="close">&times;</span>
+                    <h1 class="title-modal">Meteorological Data Processing.</h1>
+                    <div class="project-infos">
+                        <p class="subtitle">School Project - 2023</p>
+                        <p class="project-desc">The aim of the project was to process meteorological data into graphs for visualization. To achieve this, we had to code functions in C, and a script (in bash) to handle the calls to these functions. The user used the script to select the input file, and could also call up various filter functions, such as date, geographical coordinates or geographical area. The program processed a variety of data, such as temperatures, pressures, speeds and geographic coordinates, altitudes and various rates. On average, the program processed over 2 million items of data, calculating averages, minimums and maximums, and sorting them chronologically or by user-selected criteria. After processing, the script generated graphs, enabling the user to visualize the data clearly.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-2" class="modal">
+                <div class="modal-content">
+                    <span id="close-2" class="close">&times;</span>
+                    <h1 class="title-modal">Some small web practical projects.</h1>
+                    <div class="project-infos">
+                        <p class="subtitle">School Project - 2023</p>
+                        <p class="project-desc">Here are 2 small personal projects made to work on creating javascript and php features. The first, "pokee", is a food ordering site, where you select the number of ingredients you'd like to add to your pokebowl, then choose them before entering your order details. I tried to add an artistic touch to this project, creating an authentic design, and trying to limit the content on the screen, to keep it minimalist. The second is a music site, called "neuver" (a pun on the French site deezer) with a login system: the administrator manages the artists and music in the database, and the user can log in to search for music in the database. Here again, I wanted to create a simple, uncluttered design, while adding a few extra features.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-3" class="modal">
+                <div class="modal-content">
+                    <span id="close-3" class="close">&times;</span>
+                    <h1 class="title-modal">Editable website with new features.</h1>
+                    <div class="project-infos">
+                        <p class="subtitle">School Project - 2023</p>
+                        <p class="project-desc">This project was the first school project where we worked for a real company. In this case, it was a French association working for the justice system. We had to create two pages to be included in their website, to simplify the user experience. We started by creating a page summarizing useful information for users, and adding a major feature, a map, accompanied by a search bar and filters, enabling them to easily find information relating to their location. The second page was a catalog of training courses offered by the association, so we created a model training page, which was also designed to be clearer to facilitate the user experience. The major challenge of this project was that the entire site had to be editable by the association.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function openmodal(m) {
+                var modal=document.getElementById("modal-"+m.id);
+                modal.style.display="flex";
+                document.getElementById("close-"+m.id).onclick = function() {
+                    modal.style.animation = "unloading 0.7s";
+                    setTimeout(() => {  modal.style.display = "none", modal.style.animation="loading 0.7s" }, 650);
+                }
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.animation = "unloading 0.7s";
+                        setTimeout(() => {  modal.style.display = "none", modal.style.animation="loading 0.7s"}, 650);
+                    }
+                }
+            }
+        </script>
+    </div>
     </div>
 </body>
 </html>
-
