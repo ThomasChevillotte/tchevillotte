@@ -13,42 +13,14 @@ body {
     width: 100% !important;
     overflow:hidden !important;
 }
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
 
 
     /* WRAPPER */
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
 
-
-    /* LOADER */
-.loader {
-    width: 3em;
-    height: 3em;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 0.8s linear infinite, loading 5s;
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} 
-
-
-    /* TEXT */
 @keyframes loading {
     from {
         opacity: 0;
@@ -57,21 +29,206 @@ body {
         opacity: 1;
     }
 }
-.notrdy {
-    font-family: 'Poppins', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3vh;
-    user-select: none;
-    animation: loading 5s;
+@keyframes unloading {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    animation: loading 3s;
+    overflow:hidden !important;
+}
+
+
+
+    /* SLIDER */
+.slider {
+    height: 30vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.slider-menu {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.slider-button {
+  width: 1em;
+  height: 1em;
+  margin: 2rem 12px;
+  border-radius: 50%;
+  outline: 0.25em solid white;
+  cursor: pointer;
+  appearance: none;
+  backface-visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+.slider-button:checked {
+   animation: check 0.4s linear forwards;
+}
+.slider-text {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 400%;          /* EDIT TAILLE */
+  -webkit-transition: left 0.4s;
+  transition: left 0.4s;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+.slider__contents {
+  height: 100%;
+  text-align: center;
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 4vh;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  cursor: pointer;
+}
+
+@keyframes check {
+  0% {
+    background-color: white;
+    outline: 0.35em solid white;
+    outline-offset: -0.1em;
+  }
+  100% {
+    background-color: white;
+    outline: 0.35em solid white;
+    outline-offset: -0.1em;
+  }
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* MODALS */
+.modal {
+    display: none;
+    height: 100vh;
+    position:fixed;
+    z-index: 12;
+    width: 100%;
+    left: 0;
+    top: 0;
+    animation: loading 1s;
+    background-color: black;
+}
+.modal-content {
+    background-color: black;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid white;
+    width: 60%;
+    height: 45%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.modal-content h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    font-size: 3vh;
+    color: white;
+}
+.modal-content::-webkit-scrollbar {
+    display: none;
+  }
+.close {
+    color: white;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    height: 1.5em;
+}
+.close:hover, .close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.projects-infos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 2.5vh;
+    color: white;
+}
+.project-desc {
+    font-size: 2.5vh;
+    color: white;
+    text-align: justify;
+    margin-block-end: 0;
+}
+
+
+
+
+
 
 
 
     /* MEDIA QUERIES */
 @media screen and (max-width: 767px) {  /* PHONE */ 
-
+    .slider-text {
+        flex-wrap: wrap;
+    }
+    .slider__contents {
+        font-size: 3vh;
+        padding: 0 5vw;
+    }
+    .slider-button {
+        width: 0.5em;
+        height: 0.5em;
+        outline: 0.15em solid white;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 80%;
+        height: 80%;
+    }
+    .modal-content h1 {
+        margin-top: 5vh;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {  /* TABLET */
-
+    .slider-text {
+        flex-wrap: wrap;
+    }
+    .slider__contents {
+        font-size: 3vh;
+        padding: 0 5vw;
+    }
+    .slider-button {
+        width: 0.5em;
+        height: 0.5em;
+        outline: 0.15em solid white;
+    }
+    .modal-content {
+        padding: 20px;
+        width: 80%;
+        height: 80%;
+    }
+    .modal-content h1 {
+        margin-top: 5vh;
+    }
 }
