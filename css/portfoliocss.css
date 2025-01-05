@@ -80,7 +80,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  width: 600%;          /* EDIT TAILLE */
+  width: 700%;          /* EDIT TAILLE */
   -webkit-transition: left 0.4s;
   transition: left 0.4s;
   display: flex;
