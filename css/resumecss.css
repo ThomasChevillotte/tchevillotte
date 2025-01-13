@@ -113,10 +113,10 @@ p{
     left: 0;
     top: 0;
     animation: loading 1s;
-    background-color: black;
+    background-color: #0c0c0c;
 }
 .modal-content {
-    background-color: black;
+    background-color: #0c0c0c;
     margin: auto;
     padding-top: 20px;
     padding-bottom: 40px;   /*20px*/
@@ -170,7 +170,7 @@ p{
     cursor: pointer;
 }
 select, select:checked {
-    background-color:black;
+    background-color:#0c0c0c;
     color:white;
     border: 2px solid white;
     border-radius : 20px;
@@ -181,7 +181,7 @@ select, select:checked {
     appearance: none;
 }
 .dlbtn {
-    background-color:black;
+    background-color:#0c0c0c;
     color:white;
     border: 2px solid white;
     border-radius : 20px;
@@ -196,13 +196,6 @@ select, select:checked {
 
     /* MEDIA QUERIES */
 @media screen and (max-width: 767px) {  /* PHONE */
-    body {
-        margin: 0;
-        background-color: black;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow:scroll !important;
-    }
     h1 {
         font-size: 4vh;
     }
@@ -225,13 +218,6 @@ select, select:checked {
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {  /* TABLET */
-    body {
-        margin: 0;
-        background-color: black;
-        max-width: 100% !important;
-        width: 100% !important;
-        overflow:scroll !important;
-    }
     h1 {
         font-size: 4vh;
     }
