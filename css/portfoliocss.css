@@ -127,10 +127,10 @@ body {
     left: 0;
     top: 0;
     animation: loading 1s;
-    background-color: black;
+    background-color: #0c0c0c;
 }
 .modal-content {
-    background-color: black;
+    background-color: #0c0c0c;
     margin: auto;
     padding: 40px;
     border: 1px solid white;
